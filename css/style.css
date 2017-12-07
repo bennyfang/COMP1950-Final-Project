@@ -1,0 +1,228 @@
+/*
+first colour: #009688;
+*/
+@import "http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css";
+* {
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+a {
+	color: #009688;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #444444;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+	
+h1 {
+	font-size: 200%;
+}
+h2 {
+	font-size: 180%;
+}
+h3 {
+	font-size: 140%;
+}
+h4 {
+	font-size: 120%;
+}
+
+.muted {
+	opacity: .5;
+}
+
+.disabled {
+	opacity: .5;
+	cursor: default;
+}
+
+.disabled:hover {
+	text-decoration: none;
+}
+
+.content {
+	width: 100%;
+	max-width: 900px;
+	display: block;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+#header {
+	background-color: #ffffff;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+	border-bottom: 2px solid #009688;
+}
+
+#header .content {	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 20px;
+}
+
+#header #menuButton {
+	width: 40px;
+	margin-right: 20px;
+	cursor: pointer;
+	display: none;
+}
+
+#header #logo {
+	width: 100px;
+}
+
+#header h1 {
+	margin: 0 0 0 20px;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+}
+
+#container aside {
+	flex: 1;
+}
+
+#container main {
+	flex: none;
+	background-color: white;
+}
+
+#mainMenu {
+	padding: 20px;
+}
+
+#mainMenu > nav {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#mainMenu a {
+	padding: 10px 7px;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#mainMenu ul ul {
+	margin-left: 10px;
+}
+
+#main {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#footer {
+	background-color: #ffffff;
+	box-shadow: 0 -4px 2px -2px rgba(0,0,0,.2);
+	border-top: 2px solid #009688;
+}
+
+#footer .content {	
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 10px;
+}
+
+#footer .content * {
+	margin: 0;
+	font-size: 90%;
+	text-align: center;
+	font-weight: 400;
+}
+
+#footer h5 {
+	margin: 0;
+}
+
+#footer .content > div {
+	flex: 1;
+	text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+	
+	#header #menuButton {
+		flex: none;
+		display: block;
+	}
+	
+	#header .content > div {
+		flex: 1;
+	}
+	
+	#header .content > div img {
+		margin: 0 auto;
+		display: block;
+	}
+	
+	#header h1 {
+		display: none;
+	}
+	
+	#mainMenu {
+		display: none;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	#mainMenu.activated {
+		display: block;
+	}
+	
+	#menuBackground {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.2);
+	}
+
+	#mainMenu > nav {
+		width: 90%;
+		background-color: white;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		flex-direction: column;
+    	justify-content: flex-start;
+	}
+	
+	#menuHeader {
+		height: 300px;
+		width: 100%;
+		display: block;
+		background: transparent url("../img/logo.png") no-repeat center center;
+		background-size: cover;
+	}
+	
+	#mainMenu nav > ul {
+		padding: 20px;
+	}
+}
