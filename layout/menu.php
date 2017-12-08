@@ -4,27 +4,37 @@
 		<div id="menuHeader"></div>
 		<ul>
 			<li>
-				<a href="/	">Home</a>
+				<a href="/index.php">Introduction</a>
 			</li>
+			<hr />
 			<li>
-				<a href="#">Page 01</a>
+				<a href="/home.php">Home</a>
 			</li>
+			<hr />
 			<li>
-				<a href="#">Page 02</a>
-				<ul>
+				<a href="/about/comp1950.php">About COMP1950</a>
+			</li>
+			<hr />
+			<li>
+				<a href="#" class="expand-item">Lecture 1</a>
+				<ul class="expand-content collapsed">
 					<li>
-						<a href="#">Subpage 01</a>
+						<a href="#">Content</a>
 					</li>
+					<hr />
 					<li>
-						<a href="#">Subpage 02</a>
-					</li>
-					<li>
-						<a href="#">Subpage 03</a>
+						<a href="#">Resources</a>
 					</li>
 				</ul>
 			</li>
+
+			<hr />
 			<li>
-				<a href="#">About</a>
+				<a href="#">Sitemap</a>
+			</li>
+			<hr />
+			<li>
+				<a href="#">Rationale</a>
 			</li>
 		</ul>
 	</nav>

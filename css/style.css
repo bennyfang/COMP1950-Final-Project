@@ -2,21 +2,36 @@
 first colour: #009688;
 */
 @import "http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css";
+@charset "utf-8";
+
 * {
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	font-size: 20px;
-	line-height: 28px;
+	line-height: 150%;
+}
+
+html {
+	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
+	min-height: 100%;
 	background-color: #f1f1f1;
+	position: relative;
+	padding-bottom: 110px; /* same as footer height */
+	overflow-x: hidden;
 }
 
 a {
 	color: #009688;
 	text-decoration: none;
 	font-weight: bold;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 a:hover {
@@ -26,9 +41,9 @@ a:hover {
 h1, h2, h3, h4, h5 {
 	color: #444444;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
-	
+
 h1 {
 	font-size: 200%;
 }
@@ -40,6 +55,11 @@ h3 {
 }
 h4 {
 	font-size: 120%;
+}
+
+.section p {
+	display: block;
+	margin-bottom: 20px;
 }
 
 .muted {
@@ -57,23 +77,32 @@ h4 {
 
 .content {
 	width: 100%;
-	max-width: 900px;
+	max-width: 80%;
 	display: block;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 
+.ghost {
+	background-color: white;
+}
+
+.no-overflow {
+	overflow: hidden;
+}
+
 #header {
-	background-color: #ffffff;
+	background-color: #EAE0CC; /* pearl */
 	box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 	border-bottom: 2px solid #009688;
 }
 
-#header .content {	
+#header .content {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	padding: 20px;
+	margin: 0;
 }
 
 #header #menuButton {
@@ -94,6 +123,7 @@ h4 {
 #container {
 	display: flex;
 	flex-direction: row;
+	min-height: 50%;
 }
 
 #container aside {
@@ -103,27 +133,58 @@ h4 {
 #container main {
 	flex: none;
 	background-color: white;
+	max-width: calc(100%-200px);
 }
 
 #mainMenu {
 	padding: 20px;
+	min-width: 200px;
 }
 
 #mainMenu > nav {
 	display: flex;
     flex-direction: row;
     justify-content: flex-end;
+		flex-wrap: nowrap;
+	min-width: 156px;
+	min-height: 462px; /* exact number after expansion */
 }
 
 #mainMenu a {
-	padding: 10px 7px;
 	display: block;
-	font-size: 30px;
+	padding: 5px 0;
+	text-decoration: none;
 	font-weight: 400;
+}
+
+#mainMenu a:hover {
+	color: red;
+}
+
+#mainMenu > nav, #mainMenu > nav > ul {
+	float: left;
+	width: 100%;
 }
 
 #mainMenu ul ul {
 	margin-left: 10px;
+}
+
+#mainMenu .expand-item:after {
+	content: ' ▼';
+}
+
+#mainMenu .expand-item:after {
+	content: ' ▼';
+}
+
+.expanded {
+	display: block;
+	margin-top: 10px;
+}
+
+.collapsed {
+	display: none;
 }
 
 #main {
@@ -132,16 +193,22 @@ h4 {
 }
 
 #footer {
-	background-color: #ffffff;
+	background-color: #443E3E; /* dark grey */
 	box-shadow: 0 -4px 2px -2px rgba(0,0,0,.2);
 	border-top: 2px solid #009688;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 102px;
 }
 
-#footer .content {	
+#footer .content {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 10px;
+	max-width: 1500px;
 }
 
 #footer .content * {
@@ -149,6 +216,19 @@ h4 {
 	font-size: 90%;
 	text-align: center;
 	font-weight: 400;
+	color: #EAE0CC; /* pearl */
+}
+
+#footer .content a {
+	text-decoration: underline;
+}
+
+#footer .content a:hover {
+	color: #009688;
+}
+
+#footer .content small {
+	display: block;
 }
 
 #footer h5 {
@@ -161,25 +241,25 @@ h4 {
 }
 
 @media only screen and (max-width: 900px) {
-	
+
 	#header #menuButton {
 		flex: none;
 		display: block;
 	}
-	
+
 	#header .content > div {
 		flex: 1;
 	}
-	
+
 	#header .content > div img {
 		margin: 0 auto;
 		display: block;
 	}
-	
+
 	#header h1 {
 		display: none;
 	}
-	
+
 	#mainMenu {
 		display: none;
 		padding: 0;
@@ -189,11 +269,11 @@ h4 {
 		top: 0;
 		left: 0;
 	}
-	
+
 	#mainMenu.activated {
 		display: block;
 	}
-	
+
 	#menuBackground {
 		width: 100%;
 		height: 100%;
@@ -201,28 +281,39 @@ h4 {
 		top: 0;
 		left: 0;
 		background-color: rgba(0,0,0,.2);
+		overflow: inherit;
 	}
 
 	#mainMenu > nav {
 		width: 90%;
+		max-width: 300px;
 		background-color: white;
 		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
 		flex-direction: column;
-    	justify-content: flex-start;
+    justify-content: flex-start;
+		overflow: inherit;
 	}
-	
+
 	#menuHeader {
-		height: 300px;
-		width: 100%;
+		height: 50px;
+		min-width: 300px;
 		display: block;
-		background: transparent url("../img/logo.png") no-repeat center center;
-		background-size: cover;
+		background: transparent url("../img/comp1950.png") no-repeat center center;
+		background-size: 100%;
 	}
-	
+
 	#mainMenu nav > ul {
 		padding: 20px;
+	}
+
+	#mainMenu ul, #mainMenu nav {
+		float: none;
+	}
+
+	.content {
+		max-width: 100%;
 	}
 }
