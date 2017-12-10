@@ -4,7 +4,7 @@
 # comments in .htaccess begin with a number sign (like this line does)
 
 #ErrorDocument <errorNumber> <path>
-ErrorDocument 404 /404.php
+ErrorDocument 404 /proto-site/404.php
 
 SetEnv TZ Canada/Pacific
 

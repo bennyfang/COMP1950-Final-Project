@@ -1,197 +1,261 @@
-/*
-first colour: #009688;
-*/
 @import "http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css";
 @charset "utf-8";
 
+/* Benny Fang A01034306 */
+/* specify font-family for all fonts */
 * {
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
-	font-size: 20px;
+  font-size: 20px;
 	line-height: 150%;
 }
 
-html {
-	height: 100%;
-	overflow-x: hidden;
+h1, h2, h3, p, li, a, ul {
+  color: #54426B; /* cyber grape */
 }
-
-body {
-	min-height: 100%;
-	background-color: #f1f1f1;
-	position: relative;
-	padding-bottom: 110px; /* same as footer height */
-	overflow-x: hidden;
-}
-
-a {
-	color: #009688;
-	text-decoration: none;
-	font-weight: bold;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5 {
-	color: #444444;
-	font-weight: 700;
+/* font style */
+h1 {
+  font-size: 200%;
+  font-weight: bolder;
+  min-width: 100%;
 	margin: 20px 0;
 }
 
-h1 {
-	font-size: 200%;
-}
 h2 {
-	font-size: 180%;
-}
-h3 {
-	font-size: 140%;
-}
-h4 {
-	font-size: 120%;
+  font-size: 160%;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 25px;
 }
 
-.section p {
+h3 {
+  font-size: 140%;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+p {
 	display: block;
 	margin-bottom: 20px;
 }
 
-.muted {
-	opacity: .5;
+section ul {
+	margin-bottom: 20px;
+	font-weight: bold;
 }
 
-.disabled {
-	opacity: .5;
-	cursor: default;
+section ul li {
+	list-style: circle;
+	margin-left: 25px;
+	font-weight: normal
 }
 
-.disabled:hover {
-	text-decoration: none;
+/* link style */
+a {
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 
-.content {
-	width: 100%;
-	max-width: 80%;
-	display: block;
-	margin: 0 auto;
-	padding: 0 20px;
+section > a:hover, p a:hover, li a:hover {
+  color: #4CAF50; /* green */
 }
 
-.ghost {
-	background-color: white;
+/* body and container style */
+html {
+  height:100%;
+  overflow-x: hidden;
 }
 
-.no-overflow {
-	overflow: hidden;
+body {
+  position: relative;
+  min-height: 100%;
+  background-color: #EAE0CC; /* pearl */
+	padding-bottom: 110px; /* same as footer height */
+	overflow-x: hidden;
 }
 
-#header {
-	background-color: #EAE0CC; /* pearl */
-	box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-	border-bottom: 2px solid #009688;
+#main-container {
+  margin: 2.5% 10%;
+  overflow: hidden;
 }
 
-#header .content {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 20px;
-	margin: 0;
+.text-wrapper {
+  display: inline;
 }
 
-#header #menuButton {
-	width: 40px;
-	margin-right: 20px;
-	cursor: pointer;
-	display: none;
+/* img style: left and right */
+.img-left-wrapper {
+  width: 300px;
+  margin: 0 4% 2.5% 0;
+  padding: 0;
+  position: relative;
+  float: left;
 }
 
-#header #logo {
-	width: 100px;
+.img-right-wrapper {
+  width: 300px;
+  margin: 0 0 2.5% 4%;
+  padding: 0;
+  position: relative;
+  float: right;
 }
 
-#header h1 {
-	margin: 0 0 0 20px;
+.img-cropper {
+  height: auto;
+  overflow: hidden;
+  border-radius: 10%;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 #54426B;
 }
 
-#container {
-	display: flex;
-	flex-direction: row;
-	min-height: 50%;
+.img-cropper img {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
-#container aside {
-	flex: 1;
+/* responsive design */
+@media screen and (max-width: 599px) {
+  header .header-text {
+    font-size: calc(20px - 10%);
+  }
+
+  header:hover .header-text {
+    left: 40% !important;
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
 }
 
-#container main {
-	flex: none;
-	background-color: white;
-	max-width: calc(100%-200px);
+@media screen and (max-width: 381px) {
+  header .header-text {
+    display: none;
+  }
 }
 
-#mainMenu {
-	padding: 20px;
-	min-width: 200px;
+/* header style */
+
+.header-background {
+  display: block;
+  height: 92px;
+  background-image: url(/img/comp1950.png);
+  text-decoration: none;
+  text-align: center;
+  -moz-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
-#mainMenu > nav {
-	display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-		flex-wrap: nowrap;
-	min-width: 156px;
-	min-height: 462px; /* exact number after expansion */
+.header-text {
+  position: absolute;
+  top: 1vw;
+  left: 100%;
+  white-space: nowrap;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: inline;
+  font-size: calc(2vw + 5px);
+  text-decoration: none;
+  color: red;
 }
 
-#mainMenu a {
-	display: block;
-	padding: 5px 0;
-	text-decoration: none;
-	font-weight: 400;
+.header-text:after {
+  content: '\00bb';
+  position: absolute;
+  right: -12px;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-#mainMenu a:hover {
-	color: red;
+header:hover .header-background {
+  opacity: 0.3;
 }
 
-#mainMenu > nav, #mainMenu > nav > ul {
-	float: left;
-	width: 100%;
+header:hover .header-text {
+  padding-right: 18px;
+  left: 60%;
+  color: red;
 }
 
-#mainMenu ul ul {
-	margin-left: 10px;
+header:hover .header-text:after {
+  opacity: 1;
+  right: 0;
 }
 
-#mainMenu .expand-item:after {
-	content: ' ▼';
+/* nav style - modified from example: https://www.w3schools.com/css/css_navbar.asp */
+/* alter to color, border, flex display */
+.nav-link-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E28413; /* orange */
+  display: flex;
+  flex-flow: row wrap;
 }
 
-#mainMenu .expand-item:after {
-	content: ' ▼';
+.nav-link-list li {
+  float: left;
+  width: 150px;
+  border-right: 2px black solid;
+  border-bottom: 2px black solid;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.expanded {
-	display: block;
-	margin-top: 10px;
+.nav-link-list li a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #54426B; /* cyber grape */
+  -moz-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  transition: background 0.4s ease;
 }
 
-.collapsed {
-	display: none;
+/* Change the link color to #111 (black) on hover */
+.nav-link-list li a:hover {
+  background-color: #C9ADA1; /* silver pink */
 }
 
-#main {
-	padding-top: 20px;
-	padding-bottom: 20px;
+#current {
+  background-color: #DB5461; /* DARK TERRA COTTA */
 }
 
+/* responsive header bar without javascript */
+@media screen and (max-width: 749px) and (min-width: 355px) {
+  .nav-link-list li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 354px) {
+  .nav-link-list {
+    flex-direction: column;
+  }
+  .nav-link-list li {
+    width: 100%;
+  }
+}
+
+/* footer style */
 #footer {
 	background-color: #443E3E; /* dark grey */
 	box-shadow: 0 -4px 2px -2px rgba(0,0,0,.2);
@@ -206,7 +270,7 @@ h4 {
 #footer .content {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	padding: 10px;
 	max-width: 1500px;
 }
@@ -240,80 +304,6 @@ h4 {
 	text-align: center;
 }
 
-@media only screen and (max-width: 900px) {
-
-	#header #menuButton {
-		flex: none;
-		display: block;
-	}
-
-	#header .content > div {
-		flex: 1;
-	}
-
-	#header .content > div img {
-		margin: 0 auto;
-		display: block;
-	}
-
-	#header h1 {
-		display: none;
-	}
-
-	#mainMenu {
-		display: none;
-		padding: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	#mainMenu.activated {
-		display: block;
-	}
-
-	#menuBackground {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: rgba(0,0,0,.2);
-		overflow: inherit;
-	}
-
-	#mainMenu > nav {
-		width: 90%;
-		max-width: 300px;
-		background-color: white;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		flex-direction: column;
-    justify-content: flex-start;
-		overflow: inherit;
-	}
-
-	#menuHeader {
-		height: 50px;
-		min-width: 300px;
-		display: block;
-		background: transparent url("../img/comp1950.png") no-repeat center center;
-		background-size: 100%;
-	}
-
-	#mainMenu nav > ul {
-		padding: 20px;
-	}
-
-	#mainMenu ul, #mainMenu nav {
-		float: none;
-	}
-
-	.content {
-		max-width: 100%;
-	}
+.muted {
+	opacity: .5;
 }

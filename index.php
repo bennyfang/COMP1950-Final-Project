@@ -1,18 +1,26 @@
 <?php include("layout/header.php") ?>
-<section class="section">
-	<figure>
-		<img src="/img/example.jpg">
-	</figure>
-	<article>
+<article>
+	<section>
 		<h1>Introduction</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</article>
-</section>
+		<p>This project is completed by Benny Fang and Andre Arruda. It features a redesign on the current COMP1950 landing page to suit for a more modern, simplistic web layout as well as rearrangement on contents and categories, as specified in the sitemap.
+	</section>
+	<section>
+		<h2>Work distribution</h2>
+		<ul>Andre:
+			<li>Drafting the sitemap of proposed COMP1950 site</li>
+			<li>Design of proto site layout, including header, footer and menu</li>
+			<li>Responsive design on layouts</li>
+			<li>Javascript to expand/collapse menu on small screen</li>
+			<li>Creating 404 page</li>
+		</ul>
+		<ul>Benny:
+			<li>Adding contents to proto site</li>
+			<li>Adding to existing layout style to completion and also providing meta site styles</li>
+			<li>Finding images, scripts, etc. to complement contents</li>
+			<li>Write up on intro page and rationale page</li>
+			<li>Adding .htaccess file, and also rearranging files and paths</li>
+			<li>Print style</li>
+		</ul>
+	</section>
+</article>
 <?php include("layout/footer.php") ?>

@@ -1,3 +1,5 @@
+	</main>
+	<aside class="ghost"><!-- Ghost --></aside>
 </div>
 <footer id="footer">
 	<div class="content">
@@ -15,5 +17,6 @@
 	</div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/proto-site/js/script.js"></script>
 </body>
 </html>
