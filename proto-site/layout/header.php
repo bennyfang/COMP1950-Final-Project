@@ -19,10 +19,10 @@
 <body>
 	<header id="header">
 		<div class="content">
-			<img id="menuButton" src="/img/menu.svg">
+			<img id="menuButton" src="/proto-site/img/menu.svg">
 			<div>
 				<a href="/">
-					<img id="logo" src="/img/logo.png" rel="Logo">
+					<img id="logo" src="/proto-site/img/logo.png" rel="Logo">
 				</a>
 			</div>
 			<h1>COMP1950</h1>
