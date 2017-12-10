@@ -26,11 +26,10 @@
 
 	<nav id="main-nav">
 		<ul	class="nav-link-list">
-			<li><a href="../index.html">Back to Home</a></li>
-			<li><a href="index.php">Introduction</a></li>
-			<li><a href="proto-site/index.php">Protosite</a></li>
-			<li><a href="sitemap.html" target="_blank">Sitemap</a></li>
-			<li><a href="rationale.php">Rationale</a></li>
+			<li><a href="/index.php">Introduction</a></li>
+			<li><a href="/proto-site/index.php">Protosite</a></li>
+			<li><a href="/sitemap.html" target="_blank">Sitemap</a></li>
+			<li><a href="/rationale.php">Rationale</a></li>
 		</ul>
 	</nav>
 	<div id="main-container">

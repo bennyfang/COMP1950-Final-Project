@@ -241,7 +241,7 @@ header:hover .header-text:after {
 }
 
 /* responsive header bar without javascript */
-@media screen and (max-width: 749px) and (min-width: 355px) {
+@media screen and (max-width: 599px) and (min-width: 355px) {
   .nav-link-list li {
     width: 50%;
   }
