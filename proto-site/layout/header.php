@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<title>COMP1950 Final Project</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/proto-site//css/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/proto-site/css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="/proto-site/css/print.css" media="print">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	<!--[if lt IE 9]>
